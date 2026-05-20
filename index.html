@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly BioTech | Laboratory • Biotechnology • Research</title>
+  <meta name="description" content="Premium biotechnology laboratory website using HTML, CSS and JavaScript." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="scrollProgress"></div>
+  <div id="cursorGlow" class="cursor-glow"></div>
+
+  <div id="loader" class="loader">
+    <div class="loader-card">
+      <img src="assets/stackly-logo.webp" alt="Stackly BioTechnology Logo" class="loader-logo stackly-logo">
+      <div class="loader-track"><span></span></div>
+      <p>Loading premium biotechnology research experience...</p>
+    </div>
+  </div>
+
+  <main id="website" class="page active">
+    <section class="header-section" id="home">
+      <img src="assets/hero-lab.webp" alt="Biotechnology laboratory hero background" class="header-bg parallax-img">
+      <div class="header-overlay"></div>
+      <div class="header-mesh"></div>
+
+      <header class="header" id="mainHeader">
+        <a href="index.html" class="brand stackly-home" aria-label="Stackly BioTech home">
+          <img src="assets/stackly-logo.webp" alt="Stackly BioTechnology Logo" class="brand-logo stackly-logo">
+        </a>
+
+        <nav id="nav" class="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about-lab.html">About Lab</a>
+          <a href="research.html">Research</a>
+          <a href="automation.html">Automation</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+        
+          <button class="mobile-login-link login-link" type="button" onclick="openAuthModal('login')">Login</button></nav>
+
+        <button class="primary-btn header-btn" type="button" onclick="openAuthModal('login')">Login</button>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+        <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </header>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge reveal">
+            <span class="badge-dot"></span>
+            <span>Laboratory • Biotechnology • Research</span>
+          </div>
+
+          <h1 class="reveal">Advanced molecular biotechnology for <strong>future-ready healthcare.</strong></h1>
+
+          <p class="reveal">
+            Stackly BioTech combines genomics, diagnostics, bioinformatics, automation and molecular research
+            into one premium, trusted laboratory experience.
+          </p>
+
+          <div class="hero-actions reveal">
+            <button class="primary-btn" type="button" onclick="window.location.href='services.html'">Explore Services</button>
+            <button class="secondary-btn" type="button" onclick="window.location.href='research.html'">View Research</button>
+          </div>
+
+          <div class="hero-stats reveal">
+            <div><strong data-count="25">0</strong><span>Research Units</span></div>
+            <div><strong data-count="98">0</strong><span>Accuracy Score</span></div>
+            <div><strong data-count="12000">0</strong><span>Samples Tested</span></div>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="hero-lab-card tilt-card">
+            <img src="assets/bioinformatics.webp" alt="AI bioinformatics dashboard">
+            <span class="scan-line"></span>
+            <div class="hero-lab-info">
+              <small>Live Research Dashboard</small>
+              <h3>AI-driven molecular diagnostics</h3>
+              <div class="mini-bars"><b></b><b></b><b></b><b></b></div>
+            </div>
+          </div>
+
+          <div class="floating-img floating-one">
+            <img src="assets/genomics.webp" alt="Genomics research">
+            <span>DNA Mapping</span>
+          </div>
+          <div class="floating-img floating-two">
+            <img src="assets/diagnostics.webp" alt="Clinical diagnostics">
+            <span>Clinical Testing</span>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Our Services</span>
+          <h2>Complete biotechnology services </h2>
+          <!-- <p>Cards are equal height, image-fitted, and automatically scroll left-to-right with hover pause.</p> -->
+        </div>
+
+        <div class="services-marquee reveal">
+          <div class="services-track">
+            <article class="service-card"><img src="assets/genomics.webp" alt="Genomics"><div><span>01</span><h3>Genomics</h3><p>DNA sequencing, genome mapping and precision genetic analysis.</p></div></article>
+            <article class="service-card"><img src="assets/diagnostics.webp" alt="Diagnostics"><div><span>02</span><h3>Diagnostics</h3><p>Clinical testing, biomarker detection and lab reporting.</p></div></article>
+            <article class="service-card"><img src="assets/drug-discovery.webp" alt="Drug Discovery"><div><span>03</span><h3>Drug Discovery</h3><p>Molecular screening, compound analysis and validation.</p></div></article>
+            <article class="service-card"><img src="assets/bioinformatics.webp" alt="Bioinformatics"><div><span>04</span><h3>Bioinformatics</h3><p>AI data science, computational biology and research dashboards.</p></div></article>
+            <article class="service-card"><img src="assets/molecular.webp" alt="Molecular Biology"><div><span>05</span><h3>Molecular Biology</h3><p>Protein pathways, cellular research and molecular discovery.</p></div></article>
+            <article class="service-card"><img src="assets/reporting.webp" alt="Reporting"><div><span>06</span><h3>Reporting</h3><p>Secure clinical reports, dashboards and monitoring insights.</p></div></article>
+
+            <article class="service-card"><img src="assets/genomics.webp" alt="Genomics duplicate"><div><span>01</span><h3>Genomics</h3><p>DNA sequencing, genome mapping and precision genetic analysis.</p></div></article>
+            <article class="service-card"><img src="assets/diagnostics.webp" alt="Diagnostics duplicate"><div><span>02</span><h3>Diagnostics</h3><p>Clinical testing, biomarker detection and lab reporting.</p></div></article>
+            <article class="service-card"><img src="assets/drug-discovery.webp" alt="Drug Discovery duplicate"><div><span>03</span><h3>Drug Discovery</h3><p>Molecular screening, compound analysis and validation.</p></div></article>
+            <article class="service-card"><img src="assets/bioinformatics.webp" alt="Bioinformatics duplicate"><div><span>04</span><h3>Bioinformatics</h3><p>AI data science, computational biology and research dashboards.</p></div></article>
+            <article class="service-card"><img src="assets/molecular.webp" alt="Molecular Biology duplicate"><div><span>05</span><h3>Molecular Biology</h3><p>Protein pathways, cellular research and molecular discovery.</p></div></article>
+            <article class="service-card"><img src="assets/reporting.webp" alt="Reporting duplicate"><div><span>06</span><h3>Reporting</h3><p>Secure clinical reports, dashboards and monitoring insights.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="about-main-img tilt-card">
+            <img src="assets/about-lab.webp" alt="About Stackly BioTech laboratory">
+          </div>
+          <div class="about-small-img left">
+            <img src="assets/sample-process.webp" alt="Sample processing">
+            <span>Sample Workflow</span>
+          </div>
+          <div class="about-small-img right">
+            <img src="assets/reporting.webp" alt="Lab reporting">
+            <span>Digital Reports</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="kicker">About Stackly BioTech</span>
+          <h2>Trusted laboratory intelligence with modern biotech systems.</h2>
+          <p>
+            Stackly BioTech is designed for premium biotechnology, clinical diagnostics, molecular research,
+            and AI-driven lab automation.
+          </p>
+
+          <div class="about-feature-grid">
+            <div class="tilt-card">
+              <img src="assets/diagnostics.webp" alt="Certified lab">
+              <h4>Certified Laboratory</h4>
+              <p>Clinical-grade visual trust and premium scientific workflow.</p>
+            </div>
+            <div class="tilt-card">
+              <img src="assets/bioinformatics.webp" alt="AI analysis">
+              <h4>AI Analysis</h4>
+              <p>Bioinformatics, genomics and diagnostic intelligence.</p>
+            </div>
+          </div>
+
+          <button class="primary-btn" type="button" onclick="scrollToSection('automation')">View Lab Automation</button>
+        </div>
+      </div>
+    </section>
+
+    
+<section id="research" class="section research-programs">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="dot"></span> Research Programs</span>
+      <h2>Advanced research programs built for modern biotechnology.</h2>
+      <p>
+        Explore our premium research areas across genomics, molecular discovery,
+        AI bioinformatics, diagnostics, and automated laboratory intelligence.
+      </p>
+    </div>
+
+    <div class="research-premium-grid">
+      <article class="research-premium-card reveal">
+        <div class="research-image">
+          <img src="assets/genomics.webp" alt="Genomics research">
+        </div>
+        <div class="research-content">
+          <span>01 • Genomics</span>
+          <h3>DNA Sequencing Intelligence</h3>
+          <p>Advanced DNA sequencing intelligence enables rapid genomic analysis, helping researchers detect genetic variations and accelerate precision medicine.</p>
+          <div class="research-bar"><b style="--w:92%"></b></div>
+        </div>
+      </article>
+
+      <article class="research-premium-card reveal featured">
+        <div class="research-image">
+          <img src="assets/molecular.webp" alt="Molecular biology research">
+        </div>
+        <div class="research-content">
+          <span>02 • Molecular</span>
+          <h3>Protein Pathways</h3>
+          <p>Protein pathways and cellular discovery reveal how cells communicate, repair, and grow, helping identify biomarkers and therapeutic targets.</p>
+          <div class="research-bar"><b style="--w:88%"></b></div>
+        </div>
+      </article>
+
+      <article class="research-premium-card reveal">
+        <div class="research-image">
+          <img src="assets/bioinformatics.webp" alt="Bioinformatics platform">
+        </div>
+        <div class="research-content">
+          <span>03 • Bioinformatics</span>
+          <h3>AI Data Discovery</h3>
+          <p>Bioinformatics pipelines convert complex biological data into actionable insights using AI-assisted models and secure analytics.</p>
+          <div class="research-bar"><b style="--w:95%"></b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <section class="section automation-section" id="automation">
+      <div class="container automation-grid">
+        <div class="automation-copy reveal">
+          <span class="kicker">Lab Automation</span>
+          <h2>Smart laboratory automation for faster scientific results.</h2>
+          <p>
+            Automate sample collection, workflow tracking, AI diagnostics, reporting and lab quality checks
+            with a clean premium biotechnology interface.
+          </p>
+          <div class="timeline">
+            <div><strong>01</strong><span>Sample Collection</span></div>
+            <div><strong>02</strong><span>Automated Processing</span></div>
+            <div><strong>03</strong><span>AI Diagnostics</span></div>
+            <div><strong>04</strong><span>Secure Reporting</span></div>
+          </div>
+        </div>
+
+        <div class="automation-images reveal">
+          <img class="auto-main tilt-card" src="assets/sample-process.webp" alt="Lab automation sample process">
+          <img class="auto-float" src="assets/reporting.webp" alt="Reporting dashboard">
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-section" id="team">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Expert Team</span>
+          <h2>Biotechnology leaders and clinical specialists.</h2>
+          <!-- <p>Team image height and card sizing are corrected for premium alignment on desktop and mobile.</p> -->
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card reveal tilt-card">
+            <img src="assets/team-1.webp" alt="Dr. Anika Rao">
+            <div><h3>Dr. Anika Rao</h3><p>Chief Scientist</p><button type="button" onclick="window.location.href='404.html'">LinkedIn</button></div>
+          </article>
+          <article class="team-card reveal tilt-card">
+            <img src="assets/team-2.webp" alt="Dr. Ryan Mehta">
+            <div><h3>Dr. Ryan Mehta</h3><p>Clinical Director</p><button type="button" onclick="window.location.href='404.html'">LinkedIn</button></div>
+          </article>
+          <article class="team-card reveal tilt-card">
+            <img src="assets/team-3.webp" alt="Sophia Kim">
+            <div><h3>Sophia Kim</h3><p>Bioinformatics Head</p><button type="button" onclick="window.location.href='404.html'">LinkedIn</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+<section id="ratings" class="rating-marquee-section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="dot"></span> Client Ratings</span>
+      <h2>Trusted by clinical labs and biotech teams.</h2>
+    </div>
+  </div>
+
+  <div class="rating-marquee">
+    <div class="rating-track">
+      <div class="rating-card"><h3>5.0 ★★★★★</h3><p>Excellent molecular research support.</p><span>Genomics Partner</span></div>
+      <div class="rating-card"><h3>4.9 ★★★★★</h3><p>Premium diagnostics workflow and reports.</p><span>Clinical Lab</span></div>
+      <div class="rating-card"><h3>5.0 ★★★★★</h3><p>Reliable AI bioinformatics insights.</p><span>Research Team</span></div>
+      <div class="rating-card"><h3>4.8 ★★★★★</h3><p>Clean automation and sample tracking.</p><span>Lab Operations</span></div>
+      <div class="rating-card"><h3>5.0 ★★★★★</h3><p>Beautiful biotech research experience.</p><span>Healthcare Partner</span></div>
+      <div class="rating-card"><h3>4.9 ★★★★★</h3><p>Fast reporting and secure analytics.</p><span>Diagnostics Team</span></div>
+
+      <div class="rating-card"><h3>5.0 ★★★★★</h3><p>Excellent molecular research support.</p><span>Genomics Partner</span></div>
+      <div class="rating-card"><h3>4.9 ★★★★★</h3><p>Premium diagnostics workflow and reports.</p><span>Clinical Lab</span></div>
+      <div class="rating-card"><h3>5.0 ★★★★★</h3><p>Reliable AI bioinformatics insights.</p><span>Research Team</span></div>
+      <div class="rating-card"><h3>4.8 ★★★★★</h3><p>Clean automation and sample tracking.</p><span>Lab Operations</span></div>
+      <div class="rating-card"><h3>5.0 ★★★★★</h3><p>Beautiful biotech research experience.</p><span>Healthcare Partner</span></div>
+      <div class="rating-card"><h3>4.9 ★★★★★</h3><p>Fast reporting and secure analytics.</p><span>Diagnostics Team</span></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel reveal">
+          <span class="kicker">Contact Laboratory</span>
+          <h2>Start your biotechnology project.</h2>
+          <p>Book a lab visit, diagnostics consultation, or research partnership with Stackly BioTech.</p>
+          <div class="contact-cards">
+            <div>📍 Stackly Research Center, Chennai</div>
+            <div>📞 +91 70107 92745</div>
+            <div>✉️ research@stacklybiotech.com</div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" onsubmit="submitForm(event)">
+          <input type="text" placeholder="Your Name" pattern="[A-Za-z\s]+" title="Please enter letters only" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+          <input type="email" placeholder="Email Address" required>
+          <select required>
+            <option value="">Select Service</option>
+            <option>Genomics</option>
+            <option>Diagnostics</option>
+            <option>Drug Discovery</option>
+            <option>Bioinformatics</option>
+          </select>
+          <textarea placeholder="Message"></textarea>
+          <button class="primary-btn" type="submit">Send Request</button>
+        </form>
+
+        <div class="map-wrap reveal">
+          <iframe
+            title="Stackly Research Center Chennai Map"
+            src="https://www.google.com/maps?q=Chennai%20India&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/stackly-logo.webp" alt="Stackly BioTechnology Logo" class="footer-logo stackly-logo">
+          <p>Stackly Bio Technology delivers biotechnology research, lab automation, diagnostics, and scientific reporting.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Pages</h3>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about-lab.html">About Lab</a>
+          <a href="research.html">Research</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Programs</h3>
+          <a href="services.html">Genomics</a>
+          <a href="services.html">Diagnostics</a>
+          <a href="services.html">Drug Discovery</a>
+          <a href="automation.html">Lab Automation</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Social media</h3>
+          <button class="mono-social-icon" type="button" onclick="window.location.href='404.html'" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h2V5h-2c-2.8 0-4 1.7-4 4v2H8v3h2v7h3v-7h2.4l.6-3h-3V9c0-.7.3-1 1-1z"/></svg>
+          </button>
+          <button class="mono-social-icon" type="button" onclick="window.location.href='404.html'" aria-label="Twitter X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h4.2l4.2 5.7L17.3 4H21l-6.8 7.9L21 21h-4.2l-4.6-6.2L6.9 21H3l7.4-8.7L4 4zm2.2 1.7 11.4 13.6h1.2L7.4 5.7H6.2z"/></svg>
+          </button>
+          <button class="mono-social-icon" type="button" onclick="window.location.href='404.html'" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.8H3.7V21h2.8V8.8zM5.1 3A1.7 1.7 0 1 0 5 6.4 1.7 1.7 0 0 0 5.1 3zM21 14.1c0-3.3-1.8-5.5-4.6-5.5-1.8 0-2.8 1-3.2 1.8V8.8h-2.8V21h2.8v-6.3c0-1.7.8-3.1 2.5-3.1 1.6 0 2.4 1.1 2.4 3V21H21v-6.9z"/></svg>
+          </button>
+          <button class="mono-social-icon" type="button" onclick="window.location.href='404.html'" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 3h8.4A4.8 4.8 0 0 1 21 7.8v8.4a4.8 4.8 0 0 1-4.8 4.8H7.8A4.8 4.8 0 0 1 3 16.2V7.8A4.8 4.8 0 0 1 7.8 3zm0 2A2.8 2.8 0 0 0 5 7.8v8.4A2.8 2.8 0 0 0 7.8 19h8.4a2.8 2.8 0 0 0 2.8-2.8V7.8A2.8 2.8 0 0 0 16.2 5H7.8zm4.2 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm4.4-2.7a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 Stackly Bio Technology. All Rights Reserved.</p>
+      </div>
+    </footer>
+  
+    <div class="auth-modal" id="authModal" aria-hidden="true">
+      <div class="auth-backdrop"></div>
+      <div class="auth-modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+        <button class="auth-close" type="button" onclick="closeAuthModal()" aria-label="Close form">×</button>
+
+        <form id="loginForm" class="auth-panel active" novalidate>
+          <span class="auth-kicker">Secure Access</span>
+          <h2 id="authTitle">Login to Stackly BioTech</h2>
+          <p>Enter your details and choose your role to open the correct dashboard.</p>
+
+          <div class="custom-select" data-placeholder="Select Role">
+            <button type="button" class="custom-select-btn">Select Role</button>
+            <div class="custom-select-menu">
+              <button type="button" data-value="admin">Admin</button>
+              <button type="button" data-value="researcher">Researcher</button>
+              <button type="button" data-value="patient">Patient</button>
+            </div>
+            <input type="hidden" name="loginRole" required>
+          </div>
+          <input type="email" name="loginEmail" placeholder="Email Address" autocomplete="email" required>
+          <input type="password" name="loginPassword" placeholder="Password" minlength="6" autocomplete="current-password" required>
+
+          <button class="primary-btn auth-submit" type="submit">Login</button>
+          <a class="forgot-link" href="404.html">Forgot Password?</a>
+
+          <p class="auth-switch">New user? <button type="button" onclick="switchAuth('signup')">Sign up</button></p>
+
+          <div class="social-login">
+            <span>or continue with</span>
+            <button type="button" onclick="open404()" aria-label="Continue with Google">G</button>
+            <button type="button" onclick="open404()" aria-label="Continue with LinkedIn">in</button>
+            <button type="button" onclick="open404()" aria-label="Continue with Facebook">f</button>
+          </div>
+        </form>
+
+        <form id="signupForm" class="auth-panel" novalidate>
+          <span class="auth-kicker">Create Account</span>
+          <h2>Sign up to Stackly BioTech</h2>
+          <p>Create your account, then continue from the login form.</p>
+
+          <div class="custom-select" data-placeholder="Select Role">
+            <button type="button" class="custom-select-btn">Select Role</button>
+            <div class="custom-select-menu">
+              <button type="button" data-value="admin">Admin</button>
+              <button type="button" data-value="researcher">Researcher</button>
+              <button type="button" data-value="patient">Patient</button>
+            </div>
+            <input type="hidden" name="signupRole" required>
+          </div>
+          <input type="email" name="signupEmail" placeholder="Email Address" autocomplete="email" required>
+          <input id="signupPassword" type="password" name="signupPassword" placeholder="Password" minlength="6" autocomplete="new-password" required>
+          <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password" minlength="6" autocomplete="new-password" required>
+
+          <button class="primary-btn auth-submit" type="submit">Submit</button>
+          <p class="auth-switch">Already have an account? <button type="button" onclick="switchAuth('login')">Back to login</button></p>
+
+          <div class="social-login">
+            <span>or continue with</span>
+            <button type="button" onclick="open404()" aria-label="Continue with Google">G</button>
+            <button type="button" onclick="open404()" aria-label="Continue with LinkedIn">in</button>
+            <button type="button" onclick="open404()" aria-label="Continue with Facebook">f</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

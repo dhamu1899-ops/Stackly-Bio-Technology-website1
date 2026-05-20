@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Researcher Dashboard | Stackly BioTech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+  <header class="dashboard-mobile-header">
+    <a href="index.html"><img src="assets/stackly-logo.webp" alt="Stackly BioTech"></a>
+    <button type="button" class="dashboard-mobile-toggle" onclick="toggleDashboardMenu()" aria-label="Open dashboard menu">☰</button>
+  </header>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <a href="index.html"><img class="dashboard-logo" src="assets/stackly-logo.webp" alt="Stackly BioTech"></a>
+      <div class="dashboard-profile">
+        <strong><span data-dashboard-name>User</span></strong>
+        <span><span data-dashboard-role>Researcher</span> role access</span>
+      </div>
+      <nav class="dashboard-menu">
+        <button type="button" class="active" onclick="showDashPanel('projects', this)">My Research Projects</button>
+<button type="button" class="" onclick="showDashPanel('samples', this)">Sample Tracking</button>
+<button type="button" class="" onclick="showDashPanel('results', this)">Experiment Results</button>
+<button type="button" class="" onclick="showDashPanel('protocols', this)">Protocols</button>
+<button type="button" class="" onclick="showDashPanel('reports', this)">Research Reports</button>
+<button type="button" class="" onclick="showDashPanel('settings', this)">Settings</button>
+        <button type="button" onclick="dashboardLogout()">Logout</button>
+      </nav>
+    </aside>
+    <main class="dashboard-main">
+      <div class="dashboard-top">
+        <div class="dashboard-user-title">
+          <span class="dashboard-kicker">Welcome, <b data-dashboard-name>User</b></span>
+          <h1>Researcher Dashboard</h1>
+          <p>Manage projects, sample tracking, experiment results, protocols and research reports.</p>
+        </div>
+        <div class="dashboard-account">
+          <span class="email-pill" data-dashboard-email>guest@stacklybiotech.com</span>
+          <button class="primary-btn" onclick="dashboardLogout()">Logout</button>
+        </div>
+      </div>
+      <div class="dashboard-grid"><div class="dashboard-stat"><span>Projects</span><strong>18</strong></div>
+<div class="dashboard-stat"><span>Samples</span><strong>240</strong></div>
+<div class="dashboard-stat"><span>Validated</span><strong>91%</strong></div>
+<div class="dashboard-stat"><span>Reports</span><strong>36</strong></div></div>
+      <section id="projects" class="dashboard-panel active">
+      <div class="dashboard-card">
+        <h2>My Research Projects</h2>
+        <p>View assigned biotechnology research projects, active studies, and current lab milestones.</p>
+        <div class="dashboard-actions"><button type="button" onclick="open404()">New Study Note</button><button type="button" onclick="open404()">Update Milestone</button><button type="button" onclick="open404()">Share Summary</button></div>
+        <table class="dashboard-table"><thead><tr><th>Name</th><th>Status</th><th>Owner</th><th>Action</th></tr></thead><tbody><tr><td>Biomarker Discovery</td><td><span class="status-pill">Active</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Cell Biology Assay</td><td><span class="status-pill">Planning</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Genomics Pipeline</td><td><span class="status-pill">Review</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr></tbody></table>
+      </div>
+    </section>
+<section id="samples" class="dashboard-panel">
+      <div class="dashboard-card">
+        <h2>Sample Tracking</h2>
+        <p>Static tracking board for sample intake, barcode status, processing stage, and handoff notes.</p>
+        <div class="dashboard-actions"><button type="button" onclick="open404()">Scan Sample</button><button type="button" onclick="open404()">Mark Received</button><button type="button" onclick="open404()">Quality Check</button></div>
+        <table class="dashboard-table"><thead><tr><th>Name</th><th>Status</th><th>Owner</th><th>Action</th></tr></thead><tbody><tr><td>SMP-1024</td><td><span class="status-pill">Processing</span></td><td>Molecular Lab</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>SMP-1031</td><td><span class="status-pill">Sequencing</span></td><td>Genomics</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>SMP-1042</td><td><span class="status-pill">Report Stage</span></td><td>Clinical Team</td><td><button type="button" onclick="open404()">View</button></td></tr></tbody></table>
+      </div>
+    </section>
+<section id="results" class="dashboard-panel">
+      <div class="dashboard-card">
+        <h2>Experiment Results</h2>
+        <p>Review experiment observations, validation status, and repeat-test indicators.</p>
+        <div class="dashboard-actions"><button type="button" onclick="open404()">Add Result</button><button type="button" onclick="open404()">Validate</button><button type="button" onclick="open404()">Flag Review</button></div>
+        <table class="dashboard-table"><thead><tr><th>Name</th><th>Status</th><th>Owner</th><th>Action</th></tr></thead><tbody><tr><td>PCR Cycle Test</td><td><span class="status-pill">Validated</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Protein Assay</td><td><span class="status-pill">Review</span></td><td>QA Lead</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Microscopy Batch</td><td><span class="status-pill">Completed</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr></tbody></table>
+      </div>
+    </section>
+<section id="protocols" class="dashboard-panel">
+      <div class="dashboard-card">
+        <h2>Protocols</h2>
+        <p>Access static protocol cards for sample preparation, assay setup, and reporting workflow.</p>
+        <div class="dashboard-actions"><button type="button" onclick="open404()">Open SOP</button><button type="button" onclick="open404()">Create Protocol</button><button type="button" onclick="open404()">Send For Review</button></div>
+        <table class="dashboard-table"><thead><tr><th>Name</th><th>Status</th><th>Owner</th><th>Action</th></tr></thead><tbody><tr><td>DNA Extraction SOP</td><td><span class="status-pill">Approved</span></td><td>QA</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>ELISA Workflow</td><td><span class="status-pill">Draft</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Sequencing Prep</td><td><span class="status-pill">Active</span></td><td>Genomics</td><td><button type="button" onclick="open404()">View</button></td></tr></tbody></table>
+      </div>
+    </section>
+<section id="reports" class="dashboard-panel">
+      <div class="dashboard-card">
+        <h2>Research Reports</h2>
+        <p>Prepare research summaries, experiment notes, and project-ready report packages.</p>
+        <div class="dashboard-actions"><button type="button" onclick="open404()">Draft Report</button><button type="button" onclick="open404()">Download PDF</button><button type="button" onclick="open404()">Submit Review</button></div>
+        <table class="dashboard-table"><thead><tr><th>Name</th><th>Status</th><th>Owner</th><th>Action</th></tr></thead><tbody><tr><td>Q1 Research Summary</td><td><span class="status-pill">Draft</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Assay Validation</td><td><span class="status-pill">Submitted</span></td><td>QA</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Automation Notes</td><td><span class="status-pill">Ready</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr></tbody></table>
+      </div>
+    </section>
+<section id="settings" class="dashboard-panel">
+      <div class="dashboard-card">
+        <h2>Settings</h2>
+        <p>Update researcher profile, notification preferences, and dashboard display options.</p>
+        <div class="dashboard-actions"><button type="button" onclick="open404()">Save Profile</button><button type="button" onclick="open404()">Update Password</button><button type="button" onclick="open404()">Notification Settings</button></div>
+        <table class="dashboard-table"><thead><tr><th>Name</th><th>Status</th><th>Owner</th><th>Action</th></tr></thead><tbody><tr><td>Profile</td><td><span class="status-pill">Active</span></td><td>You</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Lab Alerts</td><td><span class="status-pill">On</span></td><td>System</td><td><button type="button" onclick="open404()">View</button></td></tr><tr><td>Access</td><td><span class="status-pill">Researcher</span></td><td>Admin</td><td><button type="button" onclick="open404()">View</button></td></tr></tbody></table>
+      </div>
+    </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
