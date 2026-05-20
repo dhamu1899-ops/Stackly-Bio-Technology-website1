@@ -1731,7 +1731,7 @@ body.dark-mode .auth-card{
 /* ===== Role Dashboards ===== */
 .dashboard-body{background:#eef7ff;color:#14223b;min-height:100vh}
 .dashboard-shell{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
-.dashboard-sidebar{background:linear-gradient(180deg,#061632,#082854);color:white;padding:28px 20px;position:sticky;top:0;height:100vh;overflow:auto}
+.dashboard-sidebar{background:linear-gradient(180deg,#061632,#082854);color:white;padding:28px 20px;position:sticky;top:0;height:100%;overflow:auto}
 .dashboard-logo{width:190px;margin-bottom:28px;filter:drop-shadow(0 14px 24px rgba(0,0,0,.18))}
 .dashboard-profile{padding:18px;border:1px solid rgba(255,255,255,.16);border-radius:22px;background:rgba(255,255,255,.08);margin-bottom:20px}
 .dashboard-profile strong{display:block;font-size:18px}
@@ -2143,3 +2143,158 @@ body.dashboard-body.dark-mode .status-pill{
 }
 
 
+
+
+/* ===== Requested final-only fixes: dashboard mobile + centered social icons ===== */
+
+/* Center footer/social icons on mobile only */
+@media (max-width: 768px){
+  .footer .footer-col:has(.mono-social-icon),
+  .footer-col:has(.mono-social-icon),
+  .social-media,
+  .social-icons,
+  .footer-social{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    text-align:center !important;
+    gap:10px !important;
+  }
+
+  .footer .footer-col:has(.mono-social-icon) h3,
+  .footer-col:has(.mono-social-icon) h3,
+  .social-media h3,
+  .social-icons h3,
+  .footer-social h3{
+    flex:0 0 100% !important;
+    width:100% !important;
+    text-align:center !important;
+  }
+
+  .footer .mono-social-icon,
+  .mono-social-icon{
+    margin:0 !important;
+  }
+}
+
+/* Dashboard sidebar covers full left side in mobile drawer */
+@media (max-width: 950px){
+  .dashboard-sidebar{
+    position:fixed !important;
+    top:0 !important;
+    bottom:0 !important;
+    left:-320px !important;
+    width:300px !important;
+    height:100vh !important;
+    min-height:100vh !important;
+    padding-top:96px !important;
+    padding-bottom:30px !important;
+    overflow-y:auto !important;
+    background:linear-gradient(180deg,#061632,#082854) !important;
+    z-index:10010 !important;
+  }
+
+  .dashboard-sidebar.open{
+    left:0 !important;
+  }
+
+  .dashboard-main{
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:hidden !important;
+  }
+}
+
+@media (max-width: 420px){
+  .dashboard-sidebar{
+    width:86vw !important;
+    left:-86vw !important;
+  }
+
+  .dashboard-sidebar.open{
+    left:0 !important;
+  }
+}
+
+/* Dashboard Manage Users table responsive cards on mobile */
+@media (max-width: 768px){
+  .dashboard-card{
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:hidden !important;
+  }
+
+  .dashboard-table{
+    width:100% !important;
+    min-width:0 !important;
+    display:block !important;
+    border-radius:18px !important;
+    overflow:visible !important;
+    background:transparent !important;
+  }
+
+  .dashboard-table thead{
+    display:none !important;
+  }
+
+  .dashboard-table tbody,
+  .dashboard-table tr,
+  .dashboard-table td{
+    display:block !important;
+    width:100% !important;
+  }
+
+  .dashboard-table tr{
+    margin-bottom:14px !important;
+    padding:14px !important;
+    border:1px solid #dceeff !important;
+    border-radius:16px !important;
+    background:#ffffff !important;
+  }
+
+  .dashboard-table td{
+    border-bottom:1px solid #e5f1ff !important;
+    padding:10px 0 !important;
+    text-align:left !important;
+    color:#14223b !important;
+  }
+
+  .dashboard-table td:last-child{
+    border-bottom:0 !important;
+  }
+
+  .dashboard-table td::before{
+    display:block !important;
+    margin-bottom:5px !important;
+    color:#0a66ff !important;
+    font-size:12px !important;
+    font-weight:900 !important;
+  }
+
+  .dashboard-table td:nth-child(1)::before{content:"Name";}
+  .dashboard-table td:nth-child(2)::before{content:"Status";}
+  .dashboard-table td:nth-child(3)::before{content:"Owner";}
+  .dashboard-table td:nth-child(4)::before{content:"Action";}
+
+  .dashboard-table td button{
+    width:100% !important;
+    max-width:180px !important;
+  }
+
+  body.dashboard-body.dark-mode .dashboard-table tr{
+    background:#0b2444 !important;
+    border-color:rgba(255,255,255,.12) !important;
+  }
+
+  body.dashboard-body.dark-mode .dashboard-table td{
+    background:transparent !important;
+    color:#ffffff !important;
+    border-bottom-color:rgba(255,255,255,.12) !important;
+  }
+
+  body.dashboard-body.dark-mode .dashboard-table td::before{
+    color:#8eeaff !important;
+  }
+}
